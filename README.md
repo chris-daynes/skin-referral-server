@@ -1,6 +1,6 @@
 #skin-lesion-referral-server
 
-***javascript
+```javascript
 {
     referrals: [
         {
@@ -16,4 +16,4 @@
         }
     ]
 }
-***
+```
