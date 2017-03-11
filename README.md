@@ -2,18 +2,30 @@
 
 ```javascript
 {
-    referrals: [
-        {
-            demographics:{
-                firstName:
-                lastname:
-                NHI: 
-                age:
-                DOB:
-                address:
-                city:
+    referrals: 
+        [{
+            patient: 
+            {
+                demographics:
+                    {
+                        firstName:
+                        lastname:
+                        NHI: 
+                        age:
+                        DOB:
+                        address:
+                        city:
+                    },
+                lesions: 
+                    [{
+                        lesion: {
+                            diagnosis:
+                            size:
+                            location:
+                        }
+                    }],
+                meds:
             }
-        }
-    ]
+        }]
 }
 ```
