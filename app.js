@@ -12,7 +12,7 @@ if (process.env.NODE_ENV !== 'test') {
   mongoose.connect('mongodb://localhost/skinreferral')
 }
 
-app.use(logger('combined'));
+// app.use(logger('combined'));
 app.use(bodyParser.json());
 
 routes(app)

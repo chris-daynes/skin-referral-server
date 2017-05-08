@@ -2,7 +2,15 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const SkinSchema = new Schema({
-    nhi: String,
+    nhi: {
+        type: String,
+        validate: {
+            //the validator here needs to be a regex or something more precise
+            validator: (nhi) => nhi.length === 7,
+            message: "The NHI is not a valid format"
+        },
+        required: [ true, 'NHI is required.']
+    },
     firstName: String,
     lastName: String
 })
@@ -11,3 +19,6 @@ const Skin = mongoose.model('skin', SkinSchema)
 
 module.exports = Skin
 
+function checkFormat(nhi) {
+
+}
