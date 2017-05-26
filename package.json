@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "test": "NODE_ENV=test nodemon --exec 'mocha'"
+    "test": "NODE_ENV=test nodemon --exec 'mocha --recursive'"
   },
   "dependencies": {
     "body-parser": "~1.15.2",

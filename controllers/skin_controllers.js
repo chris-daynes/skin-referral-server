@@ -6,10 +6,17 @@ module.exports = {
         res.send({ message: 'Hello from me' })
     },
 
+    get(req, res, next) {
+        const nhi = req.params.nhi
+        Skin.findOne({ nhi: nhi})
+            .then(pt => res.send(pt))
+            .catch(next)
+    },
+
     create(req, res, next) {
         const skinProps = req.body
         Skin.create(skinProps)
-            .then(skin => res.send(skin))
+            .then(pt => res.send(pt))
             .catch(next)
     }
 }

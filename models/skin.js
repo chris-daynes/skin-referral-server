@@ -7,7 +7,7 @@ const SkinSchema = new Schema({
         validate: {
             //the validator here needs to be a regex or something more precise
             validator: (nhi) => nhi.length === 7,
-            message: "The NHI is not a valid format"
+            message: "The NHI does not have seven digits"
         },
         required: [ true, 'NHI is required.']
     },
