@@ -4,7 +4,7 @@ before(done => {
     mongoose.connect('mongodb://localhost/skinreferral_test')
     mongoose.connection
         .once('open', () => done())
-        .on('error', err => {
+        .on('error', error => {
             console.warn('Warning', error)
         })
 }) 
