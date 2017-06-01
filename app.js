@@ -6,8 +6,10 @@ const routes = require('./routes/routes')
 
 var app = express();
 
+//here using node promises for mongoose.
 mongoose.Promise = global.Promise
 
+//connect to the skinreferral db if not in test.
 if (process.env.NODE_ENV !== 'test') {
   mongoose.connect('mongodb://localhost/skinreferral')
 }
