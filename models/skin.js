@@ -10,7 +10,3 @@ const SkinSchema = new Schema(
 const Skin = mongoose.model('skin', SkinSchema)
 
 module.exports = Skin
-
-function checkFormat(nhi) {
-
-}

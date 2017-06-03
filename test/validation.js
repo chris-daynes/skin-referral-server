@@ -6,7 +6,7 @@ const app = require('../app')
 const Skin = mongoose.model('skin')
 
 describe('Validation of data inputed data', () => {
-    it('ensures that the nhi has seven digits', done => {
+    xit('ensures that the nhi has seven digits', done => {
         const ptProps = {
             nhi: "wer123",
             firstName: 'Bob',
@@ -18,7 +18,7 @@ describe('Validation of data inputed data', () => {
             .end(() => {
                 Skin.findOne({ firstName: 'Bob'})
                     .then(pt => {
-                        console.log()
+                        
                         done()
                     })
             })

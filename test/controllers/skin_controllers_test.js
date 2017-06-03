@@ -30,7 +30,7 @@ describe('The skin controllers', () => {
             })
     })
 
-    it('obtain a pt by a GET request to skin/:nhi', () => {
+    it('obtain a pt by a GET request to skin/:nhi',  done => {
         const pt = new Skin({
             nhi: 'ABC1234',
             firstName: 'Chris',
@@ -38,11 +38,11 @@ describe('The skin controllers', () => {
         })
         pt.save().then(() => {
             request(app)
-                .send('skins/' + pt.nhi)
-                .end(() => {
-                    Skin.find
+                .get('skins/' + pt.nhi)
+                .end((err, res) => {
+                    console.log('!!!', res)
+                    done()
                 })
         })
-        
     })
 })
