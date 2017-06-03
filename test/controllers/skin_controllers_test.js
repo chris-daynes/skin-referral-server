@@ -38,11 +38,13 @@ describe('The skin controllers', () => {
         })
         pt.save().then(() => {
             request(app)
-                .get('skins/' + pt.nhi)
+                .get('/skins/'  + pt.nhi)
                 .end((err, res) => {
-                    console.log('!!!', res)
+                    assert(res.body.firstName === 'Chris')
                     done()
                 })
         })
     })
 })
+
+
